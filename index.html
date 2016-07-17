@@ -6,8 +6,7 @@ layout: default
   <div id="particles-js"></div>
   <div id="site-title">{{ site.title | escape }}</div>
   <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
-  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
-  <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
     particlesJS("particles-js", {
       "particles": {
@@ -53,8 +52,6 @@ layout: default
     var count_particles,  update;
     count_particles = document.querySelector('.js-count-particles');
     update = function () {
-      stats.begin();
-      stats.end();
       if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
         count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
       }
